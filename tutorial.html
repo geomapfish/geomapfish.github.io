@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+        .padded_list li {
+            margin: 7px;
+        }
+    </style>
+    <title>GeoMapFish</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>GeoMapFish</h1>
+        <h2>Rich Web GIS Applications in an easy and flexible way</h2>
+        <a href="https://github.com/camptocamp/c2cgeoportal" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+            <a href="index.html">
+                <table class="back-button">
+                    <tr><td><< Back to the main page</td></tr>
+                </table>
+            </a>
+          <h1><a name="geomapgish-tutorial" class="anchor" href="#geomapfish-exec-summary"><span class="octicon octicon-link"></span></a>Quickstart for a GeoMapFish application</h1>
+
+<p>Before configuring anything, you should first create a new project. To do so, the easiest way is to follow the <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/create_application.html" target=_blank>documentation</a>.</p>
+<p> Once you have your application, it is time to begin its configuration:</p>
+<p>Basic configuration :</p>
+<ol>
+<li><a href="#project_org">Project organisation</a></li>
+<li><a href="#core_concepts">Core concepts for the project's administration</a></li>
+<li><a href="#basic_routes">Basic routes / applications</a> - coming soon</li>
+<li><a href="#modifying_layout">Modifying the basic layout</a> - coming soon</li>
+<li><a href="#add_layers_admin">Adding layers, groups, users, themes, roles, restriction areas using the administration interface</a> - coming soon</li>
+<li><a href="#add_layers_mapserver">Configuring layers for MapServer</a> - coming soon</li>
+</ol>
+
+<h2>Coming soon... :</h2>
+
+<p>Adding CGXP plugins :</p>
+<ol>
+<li>Exploring the official plugins</li>
+<li><a href="#plugin_conf">Adding a file to <code>jsbuild</code></a></li>
+<li>Configuring a plugin</li>
+</ol>
+
+<p>Creating plugins :</p>
+<ol>
+<li>Registering your plugin</li>
+</ol>
+
+<p>Creating server side services :</p>
+<ol>
+<li>Defining the data in the <code>models.py</code> file</li>
+<li>Using Papyrus/Mapfish</li>
+<li><a href="#custom_devs">Using custom developments</a></li>
+</ol>
+<h2>Basic configuration</h2>
+
+<div id="project_org">
+    <h3>Project organisation&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+    <p>The project will be organised like any typically <a href="http://www.pylonsproject.org/" target=_blank>Pyramid</a> application.</p>
+    <img src="images/project_structure.png" />
+    <p>Details of the project organisation</p>
+    <ul class="padded_list">
+        <li>apache : this folder contains all the Apache Server configuration needed for our project to work. See the <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/install_application.html#integrator-install-application-install-application" target=_blank>install documentation</a> for more details.</li>
+        <li>buildout : this folder contains all the instance executables you will need in the "bin" folder. The other folders are specific to the <a href="http://www.buildout.org/en/latest/index.html" target="_blank">software build system</a> and shouldn't be modified. More details about the executables are given in the <a href="#core_concepts">next section</a>.</li>
+        <li>jsbuild : this folder contains <code>*.cfg</code> files which specify which Javascript files have to be included in the built Javascript file for each part of the project (main instance, edit instance, and so on). More details about the jsbuild are given in the <a href="#core_concepts">next section</a>. </li>
+        <li>mapserver : this folder contains the MapFile you will have to modify in order to add your own layers to your instance / project. Always edited the <code>*.map.in</code> file. The templating system will take care about rebuilding the <code>*.map</code>. See the <a href="http://mapserver.org/documentation.html" target=_blank>MapServer documentation</a> for more details about the Mapfile configuration.</li>
+        <li>print : this folder contains the templates used for the print. You should refer first to the <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/print.html" target=_blank>GeoMapFish documentation</a> and secondly to <a href="http://www.mapfish.org/doc/print/configuration.html" target=_blank> MapFish print documentation</a>for this.</li>
+        <li>&lt;project&gt; : this is the core folder of all the application code of your instance / project. It contains all client and server parts needed.</li>
+        <ul>
+            <li>CONST_MIGRATION : this folder contains the scripts which you will have to apply when <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/update_application.html#update-c2cgeoportal" target=_blank>updating your c2cgeoportal version</a>. As you just created your application, you should be up-to-date. You can verify that by comparing the highest numbered Python script in the "versions" folder with the number stored in your database (schema public, table version_&lt;project&gt;).</li>
+            <li>locale : here you will have to store translation strings for the server part. Usually these one are generated automatically and you will only have to add the translation string to them. Read the <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/internationalization.html#server"target=_blank> internalization documentation section</a> for that.</li>
+            <li>scripts : this folder contains migration script. You should modify stuff there by our own.</li>
+            <li>static : this folder contains all most of the client parts of your instance. Here we will only describe the most interesting folders :</li>
+                <ul>
+                    <li>apihelp : contains the help file for the API. We will not describe the API more thoroughly in the quickstart. Please use the API route in the <a href="#basic_routes">given section</a> to get a live description of your API.</li>
+                    <li>build : will contain the built Javascript and CSS file. You will not have to modify anything in this folder</li>
+                    <li>css : contains the application's CSS. If you want to change the instance's style, then you will have to modify the CSS of the files contained in this folder (mainly <code>proj-widgets.css</code>).</li>
+                    <li>images : contains all the images files needed by the application. The might as well be called by CSS, then by the HTML files. As example, this is the folder containing the header images of your instance (and which you should change....).</li>
+                    <li>js : this folder will contain your specific client translations (see <a href="#modifying_layout">hereunder</a> for more details) and it should also contain the code related to your own plugins (if you plan to develop some, put them there...)</li>
+                    <li>lib : contains the CGXP Javascript library and its submodules. Nothing to touch inside this one....</li>
+                    <li>mobile : contains the whole configuration for the mobile instance. Mainly, you will have to configure your mobile instance using <code>config.js</code> (<a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/mobile.html" target=_blank>see the documentation</a>)</li>
+                </ul>
+            <li>templates : this folder contains the <a href="http://www.makotemplates.org/" target=_blank>Mako templates</a>; some of them are HTML templates, others are Javascript templates. In the mean time the most interesting ones are the <code>index.html</code> and the <code>viewer.js</code> files. The first one is the entry gate of your instance and the second one in the main file that you will have to modify in order to integrate / modify client plugins.</li>
+            <li>views : this folder should be empty. It is where you will have to put any server developments (if developing some...), see the <a href="#modifying_layout">hereunder section</a>.</li>
+        </ul>
+    </ul>
+
+
+</div>
+
+<div id="core_concepts">
+<h3>Core concepts for the project's administration&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+
+<div id="basic_routes">
+<h3>Basic routes / applications&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+
+<div id="modifying_layout">
+<h3>Modifying the basic layout&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+
+<div id="add_layers_admin">
+<h3>Adding layers, groups, users, themes, roles, restriction areas using the administration interface&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+
+<div id="add_layers_mapserver">
+<h3>Configuring layers for MapServer&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+
+<h2>Creating plugins</h2>
+
+<div id="plugin_conf">
+<h3>Exploring the official plugins&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+
+
+<h2>Creating server side services</h2>
+
+<div id="custom_devs">
+<h3>Using custom developments&nbsp;&nbsp;<a href="#"><img src="images/back-to-top.png" title="Back to top"></a></h3>
+<p>Coming soon... :</p>
+</div>
+  
+  
+</div>
+</div>
+  
+</body>
+</html>
