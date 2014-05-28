@@ -88,7 +88,7 @@
         <ul>
             <li>CONST_MIGRATION : this folder contains the scripts which you will have to apply when <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/update_application.html#update-c2cgeoportal" target=_blank>updating your c2cgeoportal version</a>. As you just created your application, you should be up-to-date. You can verify that by comparing the highest numbered Python script in the "versions" folder with the number stored in your database (schema public, table version_&lt;project&gt;).</li>
             <li>locale : here you will have to store translation strings for the server part. Usually these one are generated automatically and you will only have to add the translation string to them. Read the <a href="http://docs.camptocamp.net/c2cgeoportal/master/integrator/internationalization.html#server"target=_blank> internalization documentation section</a> for that.</li>
-            <li>scripts : this folder contains migration script. You should modify stuff there by our own.</li>
+            <li>scripts : this folder contains migration scripts. You should not modify stuff there by your own.</li>
             <li>static : this folder contains all most of the client parts of your instance. Here we will only describe the most interesting folders :</li>
                 <ul>
                     <li>apihelp : contains the help file for the API. We will not describe the API more thoroughly in the quickstart. Please use the API route in the <a href="#basic_routes">given section</a> to get a live description of your API.</li>
