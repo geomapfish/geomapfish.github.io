@@ -13,13 +13,13 @@
 <link rel="canonical" href="http://geomapfish.org/functionalities">
 
         <meta name="author" content="Michael Kalbermatten" />
-        <meta name="description" content="GeoMapFish Viewer User interface Desktop &amp; mobile responsive templates Full text search Data Layers Themes Navigation Zoom &amp; pan Navigation bar Geolocation Query Point &amp; rectangular interrogation Table and/or popup results Live raster &amp; coordinate interrogation Data Internal WMS &amp; WMTS WMS-T External data (WMS, KML) Organisation into themes Layer adding in themes Transparency ..." />
+        <meta name="description" content="GeoMapFish is composed of a desktop WebGIS interface, an administration interface, an API for map integration in thirdparty websites and a mobile version. Besides the OGC-Standard web services, a MapFish protocol adapted to the efficient communication between Client and Server is available. On this basis, complex and high performance web …" />
 
     <meta property="og:site_name" content="GeoMapFish" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Functionalities"/>
     <meta property="og:url" content="http://geomapfish.org/functionalities"/>
-    <meta property="og:description" content="GeoMapFish Viewer User interface Desktop &amp; mobile responsive templates Full text search Data Layers Themes Navigation Zoom &amp; pan Navigation bar Geolocation Query Point &amp; rectangular interrogation Table and/or popup results Live raster &amp; coordinate interrogation Data Internal WMS &amp; WMTS WMS-T External data (WMS, KML) Organisation into themes Layer adding in themes Transparency ..." />
+    <meta property="og:description" content="GeoMapFish is composed of a desktop WebGIS interface, an administration interface, an API for map integration in thirdparty websites and a mobile version. Besides the OGC-Standard web services, a MapFish protocol adapted to the efficient communication between Client and Server is available. On this basis, complex and high performance web …" />
 
 
     <!-- Bootstrap -->
@@ -53,11 +53,14 @@
                          <li><a href="http://geomapfish.org/index.html">
                              Home
                           </a></li>
-                         <li><a href="http://geomapfish.org/gallery">
-                             Gallery
+                         <li><a href="http://geomapfish.org/community">
+                             Community
                           </a></li>
                          <li class="active"><a href="http://geomapfish.org/functionalities">
                              Functionalities
+                          </a></li>
+                         <li><a href="http://geomapfish.org/gallery">
+                             Gallery
                           </a></li>
                          <li><a href="http://geomapfish.org/roadmap">
                              Roadmap
@@ -81,30 +84,50 @@
 	<a href="http://geomapfish.org/fr/functionalities">fr</a>
 
         <div class="entry-content">
-            <h2>GeoMapFish Viewer</h2>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_1_responsive.png" /> User interface</h3>
+            <p><br />
+GeoMapFish is composed of a desktop WebGIS interface, an administration interface, an API for map integration
+in thirdparty websites and a mobile version.</p>
+<p>Besides the OGC-Standard web services, a MapFish protocol adapted to the efficient communication
+between Client and Server is available. On this basis, complex and high performance web mapping 
+applications can be built.</p>
+<p>GeoMapFish combines some of the best Open Source tools in one application:</p>
+<ul>
+<li>Version 1: <a href="https://openlayers.org/two/">OpenLayers 2</a>, <a href="https://docs.sencha.com/extjs/3.4.0/">ExtJS</a> and <a href="http://geoext.org/v1/">GeoExt</a> on the client side</li>
+<li>Version 2: <a href="https://openlayers.org/">OpenLayers</a>, <a href="https://angularjs.org/">AngularJS</a> and <a href="https://camptocamp.github.io/ngeo/master/apidoc/">ngeo</a> on the client side</li>
+<li>Python modules (especially Papyrus based on <a href="https://trypyramid.com/">Pyramid</a>) on the server side</li>
+<li><a href="https://mapfish.github.io/mapfish-print-doc/">MapFish Print</a>, a Java servlet dedicated to print geographic documents</li>
+</ul>
+<h2>Documentation and support</h2>
+<p>Read the documentation:</p>
+<ul>
+<li>The server part of GeoMapFish is <a href="https://github.com/camptocamp/c2cgeoportal/">c2cgeoportal</a>.</li>
+<li>The client part of GeoMapFish 2.x is an Angular library called <a href="https://github.com/camptocamp/ngeo/">ngeo</a>.</li>
+<li>The client part of GeoMapFish 1.x is an ExtJS librarx called <a href="https://github.com/camptocamp/cgxp/">CGXP</a>.</li>
+</ul>
+<h2>GeoMapFish Viewer</h2>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_1_responsive.png"> User interface</h3>
 <ul>
 <li>Desktop &amp; mobile responsive templates</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_2_search.png" /> Full text search</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_2_search.png"> Full text search</h3>
 <ul>
 <li>Data</li>
 <li>Layers</li>
 <li>Themes</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_3_navigation.png" /> Navigation</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_3_navigation.png"> Navigation</h3>
 <ul>
 <li>Zoom &amp; pan</li>
 <li>Navigation bar</li>
 <li>Geolocation</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_4_query.png" /> Query</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_4_query.png"> Query</h3>
 <ul>
 <li>Point &amp; rectangular interrogation</li>
 <li>Table and/or popup results</li>
 <li>Live raster &amp; coordinate interrogation</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_5_data.png" /> Data</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_5_data.png"> Data</h3>
 <ul>
 <li>Internal WMS &amp; WMTS</li>
 <li>WMS-T</li>
@@ -114,11 +137,11 @@
 <li>Transparency &amp; metadata</li>
 <li>Dynamic legend</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_6_print.png" /> Print</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_6_print.png"> Print</h3>
 <ul>
 <li>PDF &amp; PNG print</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_7_drawing.png" /> Drawing &amp; measure</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_7_drawing.png"> Drawing &amp; measure</h3>
 <ul>
 <li>Points</li>
 <li>Lines</li>
@@ -127,54 +150,56 @@
 <li>Circles (azimuth)</li>
 <li>Labels</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_8_layer_editing.png" /> Layer editing</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_8_layer_editing.png"> Layer editing</h3>
 <ul>
 <li>Simple DB editing</li>
 <li>Simple configuration</li>
 <li>Complex editing (snapping, copying, cutting, donut extractor)</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_9_gis.png" /> GIS functionalities</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_9_gis.png"> GIS functionalities</h3>
 <ul>
 <li>SQL queries &amp; filters</li>
 <li>Time sliders</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_10_misc.png" /> Misc</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/1_10_misc.png"> Misc</h3>
 <ul>
 <li>Profile</li>
 <li>Google StreetView integration</li>
 <li>Permalink</li>
 <li>Permalink shortener</li>
 </ul>
-<hr />
+<hr>
 <h2>GeoMapFish administration</h2>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/2_1_configuration.png" /> Data administration</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/2_1_configuration.png"> Data administration</h3>
 <ul>
 <li>Layer configuration</li>
 <li>Group configuration</li>
 <li>Theme configuration</li>
 <li>Data source configuration</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/2_2_authentication.png" /> Authentication</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/2_2_authentication.png"> Authentication</h3>
 <ul>
 <li>LDAP, NTLM &amp; other interactions</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/2_3_roles.png" /> Roles</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/2_3_roles.png"> Roles</h3>
 <ul>
 <li>Roles configuration</li>
 <li>User configuration</li>
 <li>User restriction areas</li>
 <li>User functionalites</li>
 </ul>
-<hr />
+<hr>
 <h2>GeoMapFish server</h2>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/3_1_pdf.png" /> PDF reporting</h3>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/3_2_webmapping.png" /> Webmapping backends</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/3_1_pdf.png"> PDF reporting</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/3_2_webmapping.png"> Webmapping backends</h3>
 <ul>
 <li>MapServer</li>
 <li>QGIS Server</li>
 <li>ArcGIS for Server</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/images/3_3_docker.png" /> Docker deployment</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/images/3_3_docker.png"> Docker deployment</h3>
+<p><br /><br />
+For a better overview between features and versions, please refer to the <a href="https://github.com/camptocamp/ngeo/blob/master/docs/features.md">feature page</a>.</p>
         </div>
     </section>
         </div>

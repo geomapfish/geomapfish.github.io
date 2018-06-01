@@ -13,13 +13,13 @@
 <link rel="canonical" href="http://geomapfish.org/de/functionalities">
 
         <meta name="author" content="Michael Kalbermatten" />
-        <meta name="description" content="GeoMapFish Viewer Benutzeroberfläche Vorlage für Mobile und Desktop Version in &#34;responsive design&#34; Volltextsuche Dateninhalte Layer Themen Navigation Zoom &amp; Pan Navigationsleiste Geolokalisation Kartenabfrage Punkt und Flächenabfrage Resultatfenster als Tabelle oder in einem Popup-Fenster Live raster &amp; coordinate interrogation direkte Raster und Koordinatenabfrage Daten Interne WMS &amp; WMTS WMS-T Externe Daten (WMS, KML) Gliederung ..." />
+        <meta name="description" content="GeoMapFish besteht aus einer Desktop Oberfläche, einer Administrationsschnittstelle, einer API und einer mobilen Version. Neben OGC-Standard Geodiensten setzt GMF auch das Mapfish Protokoll ein. Dieses stellt die effiziente Kommunikation zwischen Client und Server sicher. Auf dieser Basis können komplexe und leistungsfähige Applikationen gebaut werden. GeoMapFish kombiniert ein paar der besten …" />
 
     <meta property="og:site_name" content="GeoMapFish" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Funktionalitäten"/>
     <meta property="og:url" content="http://geomapfish.org/de/functionalities"/>
-    <meta property="og:description" content="GeoMapFish Viewer Benutzeroberfläche Vorlage für Mobile und Desktop Version in &#34;responsive design&#34; Volltextsuche Dateninhalte Layer Themen Navigation Zoom &amp; Pan Navigationsleiste Geolokalisation Kartenabfrage Punkt und Flächenabfrage Resultatfenster als Tabelle oder in einem Popup-Fenster Live raster &amp; coordinate interrogation direkte Raster und Koordinatenabfrage Daten Interne WMS &amp; WMTS WMS-T Externe Daten (WMS, KML) Gliederung ..." />
+    <meta property="og:description" content="GeoMapFish besteht aus einer Desktop Oberfläche, einer Administrationsschnittstelle, einer API und einer mobilen Version. Neben OGC-Standard Geodiensten setzt GMF auch das Mapfish Protokoll ein. Dieses stellt die effiziente Kommunikation zwischen Client und Server sicher. Auf dieser Basis können komplexe und leistungsfähige Applikationen gebaut werden. GeoMapFish kombiniert ein paar der besten …" />
 
 
     <!-- Bootstrap -->
@@ -53,11 +53,14 @@
                          <li><a href="http://geomapfish.org/de/index.html">
                              Startseite
                           </a></li>
-                         <li><a href="http://geomapfish.org/de/gallery">
-                             Galerie
+                         <li><a href="http://geomapfish.org/de/community">
+                             Community
                           </a></li>
                          <li class="active"><a href="http://geomapfish.org/de/functionalities">
                              Funktionalitäten
+                          </a></li>
+                         <li><a href="http://geomapfish.org/de/gallery">
+                             Galerie
                           </a></li>
                          <li><a href="http://geomapfish.org/de/roadmap">
                              Roadmap
@@ -81,30 +84,50 @@
 	<a href="http://geomapfish.org/de/../fr/functionalities">fr</a>
 
         <div class="entry-content">
-            <h2>GeoMapFish Viewer</h2>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_1_responsive.png" /> Benutzeroberfläche</h3>
+            <p><br />
+GeoMapFish besteht aus einer Desktop Oberfläche, einer Administrationsschnittstelle, einer API und
+einer mobilen Version.</p>
+<p>Neben OGC-Standard Geodiensten setzt GMF auch das Mapfish Protokoll ein. Dieses stellt die
+effiziente Kommunikation zwischen Client und Server sicher. Auf dieser Basis können
+komplexe und leistungsfähige Applikationen gebaut werden.</p>
+<p>GeoMapFish kombiniert ein paar der besten OpenSource Tools, die es gibt:</p>
+<ul>
+<li>Version 1: <a href="https://openlayers.org/two/">OpenLayers 2</a>, <a href="https://docs.sencha.com/extjs/3.4.0/">ExtJS</a> und <a href="http://geoext.org/v1/">GeoExt</a> für die Client-Seite</li>
+<li>Version 2: <a href="https://openlayers.org/">OpenLayers</a>, <a href="https://angularjs.org/">AngularJS</a> und <a href="https://camptocamp.github.io/ngeo/master/apidoc/">ngeo</a> für die Client-Seite</li>
+<li>Python Module (vor allem Papyrus, das auf <a href="https://trypyramid.com/">Pyramid</a> basiert) für die Server-Seite</li>
+<li><a href="https://mapfish.github.io/mapfish-print-doc/">MapFish Print</a>, ein Java-Servlet für das Drucken von Karteninhalten</li>
+</ul>
+<h2>Dokumentation und Support</h2>
+<p>Die verschiedene GMF Komponenten:</p>
+<ul>
+<li>Die Server-Seite von GeoMapFish ist <a href="https://github.com/camptocamp/c2cgeoportal/">c2cgeoportal</a>.</li>
+<li>Die Client-Seite von GeoMapFish 2.x ist eine Angular Library, die sich <a href="https://github.com/camptocamp/ngeo/">ngeo</a> nennt.</li>
+<li>Die Client-Seite von GeoMapFish 1.x ist eine ExtJS Library, die sich <a href="https://github.com/camptocamp/cgxp/">CGXP</a> nennt.</li>
+</ul>
+<h2>GeoMapFish Viewer</h2>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_1_responsive.png"> Benutzeroberfläche</h3>
 <ul>
 <li>Vorlage für Mobile und Desktop Version in "responsive design"</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_2_search.png" /> Volltextsuche</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_2_search.png"> Volltextsuche</h3>
 <ul>
 <li>Dateninhalte</li>
 <li>Layer</li>
 <li>Themen</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_3_navigation.png" /> Navigation</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_3_navigation.png"> Navigation</h3>
 <ul>
 <li>Zoom &amp; Pan</li>
 <li>Navigationsleiste</li>
 <li>Geolokalisation</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_4_query.png" /> Kartenabfrage</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_4_query.png"> Kartenabfrage</h3>
 <ul>
 <li>Punkt und Flächenabfrage</li>
 <li>Resultatfenster als Tabelle oder in einem Popup-Fenster</li>
 <li>Live raster &amp; coordinate interrogation direkte Raster und Koordinatenabfrage</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_5_data.png" /> Daten</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_5_data.png"> Daten</h3>
 <ul>
 <li>Interne WMS &amp; WMTS</li>
 <li>WMS-T</li>
@@ -114,11 +137,11 @@
 <li>Transparenz und Metadaten</li>
 <li>Dynamische Legende</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_6_print.png" /> Drucken</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_6_print.png"> Drucken</h3>
 <ul>
 <li>PDF &amp; PNG Ausdruck</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_7_drawing.png" /> Zeichnen und Messen</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_7_drawing.png"> Zeichnen und Messen</h3>
 <ul>
 <li>Punkte</li>
 <li>Linien</li>
@@ -127,54 +150,56 @@
 <li>Kreise (Azimuth)</li>
 <li>Beschriftung</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_8_layer_editing.png" /> Layer Editieren</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_8_layer_editing.png"> Layer Editieren</h3>
 <ul>
 <li>Simple Editiermöglichkeit von Datenbankelementen</li>
 <li>Einfache Konfiguration</li>
 <li>Komplexe Editiermaske (Snapping, Kopieren von Geometrien, Ausschneiden, Löcher extrahieren)</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_9_gis.png" /> GIS Funktionalitäten</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_9_gis.png"> GIS Funktionalitäten</h3>
 <ul>
 <li>SQL Abfragen und Filter</li>
 <li>Zeit-Schieberegler</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_10_misc.png" /> Weiteres</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/1_10_misc.png"> Weiteres</h3>
 <ul>
 <li>Profile</li>
 <li>Google StreetView Integration</li>
 <li>Permalink</li>
 <li>Verkürzte Permalink-URL</li>
 </ul>
-<hr />
+<hr>
 <h2>GeoMapFish Administration</h2>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/2_1_configuration.png" /> Datenadministration</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/2_1_configuration.png"> Datenadministration</h3>
 <ul>
 <li>Layer Konfiguration</li>
 <li>Layergruppe Konfiguration</li>
 <li>Themen Konfiguration</li>
 <li>DatanquelleKonfiguration</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/2_2_authentication.png" /> Authentifizierung</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/2_2_authentication.png"> Authentifizierung</h3>
 <ul>
 <li>LDAP, NTLM &amp; other interactions</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/2_3_roles.png" /> Rollen</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/2_3_roles.png"> Rollen</h3>
 <ul>
 <li>Konfiguration der Rollen</li>
 <li>Konfiguration der Benutzer</li>
 <li>Konfiguration von Flächenbeschränkungen</li>
 <li>Konfiguration von benutzergebundenen Funktionalitäten</li>
 </ul>
-<hr />
+<hr>
 <h2>GeoMapFish server</h2>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/3_1_pdf.png" /> PDF Reports</h3>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/3_2_webmapping.png" /> Webmapping backends</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/3_1_pdf.png"> PDF Reports</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/3_2_webmapping.png"> Webmapping backends</h3>
 <ul>
 <li>MapServer</li>
 <li>QGIS Server</li>
 <li>ArcGIS for Server</li>
 </ul>
-<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/3_3_docker.png" /> Docker deployment</h3>
+<h3><img alt="Functionalities description" src="http://geomapfish.org/de/../images/3_3_docker.png"> Docker deployment</h3>
+<p><br /><br />
+Für einen besseren Überblick, gehen Sie bitte auf die <a href="https://github.com/camptocamp/ngeo/blob/master/docs/features.md">feature Seite</a>.</p>
         </div>
     </section>
         </div>

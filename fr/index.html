@@ -13,13 +13,13 @@
 <link rel="canonical" href="http://geomapfish.org/fr/index.html">
 
         <meta name="author" content="Michael Kalbermatten" />
-        <meta name="description" content="Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite ! Le framework GMF permet de construire des applications WebSIG de manière aisée et flexible. Il est composé d&#39;une interface desktop, d&#39;administration, d&#39;une API pour une intégration dans des sites connexes et d&#39;une ..." />
+        <meta name="description" content="Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite ! Généralités GeoMapFish permet de construire des applications WebSIG de manière aisée et flexible. Cette solution a été développée pour répondre aux attentes de multiples acteurs, qu&#39;ils soient de type privés, publics ou académiques du domaine du …" />
 
     <meta property="og:site_name" content="GeoMapFish" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="GeoMapFish"/>
     <meta property="og:url" content="http://geomapfish.org/fr/index.html"/>
-    <meta property="og:description" content="Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite ! Le framework GMF permet de construire des applications WebSIG de manière aisée et flexible. Il est composé d&#39;une interface desktop, d&#39;administration, d&#39;une API pour une intégration dans des sites connexes et d&#39;une ..." />
+    <meta property="og:description" content="Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite ! Généralités GeoMapFish permet de construire des applications WebSIG de manière aisée et flexible. Cette solution a été développée pour répondre aux attentes de multiples acteurs, qu&#39;ils soient de type privés, publics ou académiques du domaine du …" />
 
 
     <!-- Bootstrap -->
@@ -53,11 +53,14 @@
                          <li class="active"><a href="http://geomapfish.org/fr/index.html">
                              Accueil
                           </a></li>
-                         <li><a href="http://geomapfish.org/fr/gallery">
-                             Galerie
+                         <li><a href="http://geomapfish.org/fr/community">
+                             Communauté
                           </a></li>
                          <li><a href="http://geomapfish.org/fr/functionalities">
                              Fonctionnalités
+                          </a></li>
+                         <li><a href="http://geomapfish.org/fr/gallery">
+                             Galerie
                           </a></li>
                          <li><a href="http://geomapfish.org/fr/roadmap">
                              Roadmap
@@ -83,28 +86,23 @@
         <div class="entry-content">
             <p><br />
 Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite !</p>
-<p>Le framework GMF permet de construire des applications WebSIG de manière aisée et flexible.
-Il est composé d'une interface desktop, d'administration, d'une API pour une intégration
-dans des sites connexes et d'une version mobile.</p>
-<p>En plus des webservices aux standards OGC, un protocole MapFish est disponible. Ce dernier
-est adapté pour une communication efficiente entre client et serveur. Sur cette base, des applications
-complexes et performantes peuvent être mises en place.</p>
-<p>GeoMapFish combine quelques-uns des meilleurs outils OpenSource en une seule application:</p>
-<ul>
-<li>Version 1: <a href="https://openlayers.org/two/">OpenLayers 2</a>, <a href="https://docs.sencha.com/extjs/3.4.0/">ExtJS</a> et <a href="http://geoext.org/v1/">GeoExt</a> pour la partie cliente</li>
-<li>Version 2: <a href="https://openlayers.org/">OpenLayers</a>, <a href="https://angularjs.org/">AngularJS</a> et <a href="https://camptocamp.github.io/ngeo/master/apidoc/">ngeo</a> pour la partie cliente</li>
-<li>Modules Python (spécialement ceux liés à <a href="https://trypyramid.com/">Pyramid</a>) pour la partie serveur</li>
-<li><a href="https://mapfish.github.io/mapfish-print-doc/">MapFish Print</a>, un servlet Java dédié à l'impression de documents contenant de la cartographie.</li>
-</ul>
-<h2>Documentation et support</h2>
-<p>Les différents composants de GeoMapFish sont:</p>
-<ul>
-<li>La partie serveur de GeoMapFish est <a href="https://github.com/camptocamp/c2cgeoportal/">c2cgeoportal</a> </li>
-<li>La partie cliente de GeoMapFish 2.x est une librairie AngularJS appelée <a href="https://github.com/camptocamp/ngeo/">ngeo</a></li>
-<li>La partie cliente de GeoMapFish 1.x est une librairie ExtJS appelée <a href="https://github.com/camptocamp/cgxp/">CGXP</a></li>
-</ul>
-<h2>Screenshot</h2>
-<p><img alt="Example screenshot" src="http://geomapfish.org/fr/../images/examples/demo22.png" /></p>
+<h2>Généralités</h2>
+<p>GeoMapFish permet de construire des applications WebSIG de manière aisée et flexible.
+Cette solution a été développée pour répondre aux attentes de multiples acteurs, qu'ils
+soient de type privés, publics ou académiques du domaine du géospatial.</p>
+<p>GeoMapFish est organisé autour d'une <a href="http://geomapfish.org/fr/community">communauté et d'un project steering committee</a>.</p>
+<h2>Caractéristiques</h2>
+<p>Pour une liste plus complétes des caractéristiques, merci de vous référer à la page des <a href="http://geomapfish.org/fr/functionalities">fonctionnalités</a> page.</p>
+<p><br />
+<img alt="webmapping" src="http://geomapfish.org/fr/../images/3_2_webmapping.png"> <strong>Cartographie</strong>; elle inclut tous les outils nécessaires à un WebSIG : mesure, dessin, impression, etc.</p>
+<p><br />
+<img alt="editing" src="http://geomapfish.org/fr/../images/1_8_layer_editing.png"> <strong>Edition avancée</strong>; l'édition (points, lignes, polygones, accrochage)  est possible sur des couches protégées de la base de données. Il est même possible de restreindre l'édition à une zone donnée.</p>
+<p><br />
+<img alt="responsive" src="http://geomapfish.org/fr/../images/1_1_responsive.png"> <strong>Adaptable</strong>; l'interface web est adaptable et compatible avec la plupart des navigateurs et appareils.</p>
+<p><br />
+<img alt="webmapping description" src="http://geomapfish.org/fr/../images/2_1_configuration.png"> <strong>Personnalisable et extensible</strong>; au travers de  plugins génériques et/ou fait maison, il est possible d'adapter l'application a tous les besoins des différents utilisateurs.</p>
+<p><br /><br />
+<img alt="Example screenshot" src="http://geomapfish.org/fr/../images/examples/demo22.png"></p>
         </div>
     </section>
         </div>
