@@ -12,15 +12,15 @@
 
 <link rel="canonical" href="https://geomapfish.org/fr/index.html">
 
-        <meta name="author" content="Michael Kalbermatten, Rémi Bovard" />
-        <meta name="keywords" content="Geoportal,Open Source,GeoMapFish,SIG,Géospatial" />
-        <meta name="description" content="GeoMapFish est une plateforme Open Source pour le développement de système d&#39;information géographique en ligne (WebSIG) qui fournit un géoportail" />
+        <meta name="author" content="Michael Kalbermatten" />
+        <meta name="keywords" content="geoportal,geomapfish,webgis,gis,python" />
+        <meta name="description" content="GeoMapFish is a web based gis application" />
 
     <meta property="og:site_name" content="GeoMapFish" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="GeoMapFish"/>
     <meta property="og:url" content="https://geomapfish.org/fr/index.html"/>
-    <meta property="og:description" content="GeoMapFish est une plateforme Open Source pour le développement de système d&#39;information géographique en ligne (WebSIG) qui fournit un géoportail" />
+    <meta property="og:description" content="GeoMapFish is a web based gis application" />
 
 
     <!-- Bootstrap -->
@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                          <li class="active"><a href="https://geomapfish.org/fr/index.html">
-                             Accueil
+                             Home
                           </a></li>
                          <li><a href="https://geomapfish.org/fr/functionalities">
                              Fonctionnalités
@@ -80,7 +80,7 @@
 <!-- End Banner -->
 <div class="container">
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-10">
     <section id="content" class="body">
         <h1 class="entry-title">GeoMapFish</h1>
         <span class="label label-default">Langue</span>
@@ -88,43 +88,147 @@
 	<a href="https://geomapfish.org/fr/../index.html">en</a>
 
         <div class="entry-content">
-            <p><br />
-Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite !</p>
-<h2>Généralités</h2>
-<p>GeoMapFish permet de construire des applications WebSIG de manière aisée et flexible à travers un géoportail en ligne.
-Cette solution a été développée pour répondre aux attentes de multiples acteurs, qu'ils
-soient de type privés, publics ou académiques du domaine du géospatial.</p>
-<p>GeoMapFish est organisé autour d'une <a href="https://geomapfish.org/fr/community">communauté et d'un project steering committee</a>.</p>
-<h2>Caractéristiques</h2>
-<p>Pour une liste plus complétes des caractéristiques, merci de vous référer à la page des <a href="https://geomapfish.org/fr/functionalities">fonctionnalités</a> page.</p>
-<p><br />
-<img alt="webmapping" src="https://geomapfish.org/fr/../images/3_2_webmapping.png"> <strong>Cartographie</strong>; elle inclut tous les outils nécessaires à un WebSIG : mesure, dessin, impression, etc.</p>
-<p><br />
-<img alt="editing" src="https://geomapfish.org/fr/../images/1_8_layer_editing.png"> <strong>Edition avancée</strong>; l'édition (points, lignes, polygones, accrochage)  est possible sur des couches protégées de la base de données. Il est même possible de restreindre l'édition à une zone donnée.</p>
-<p><br />
-<img alt="responsive" src="https://geomapfish.org/fr/../images/1_1_responsive.png"> <strong>Adaptable</strong>; l'interface web est adaptable et compatible avec la plupart des navigateurs et appareils.</p>
-<p><br />
-<img alt="webmapping description" src="https://geomapfish.org/fr/../images/2_1_configuration.png"> <strong>Personnalisable et extensible</strong>; au travers de  plugins génériques et/ou fait maison, il est possible d'adapter l'application a tous les besoins des différents utilisateurs.</p>
-<p><br /><br />
-<img alt="Example screenshot" src="https://geomapfish.org/fr/../images/examples/demo22.png"></p>
+            
+    <div class="row">
+        <div class="col-sm-12">
+            <video autoplay muted class="img-responsive" loop src="https://sitn.ne.ch/web/geomapfish/geomapfish-org/intro.mp4">
+            </video>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1em;">
+        <div class="col-sm-6">
+            <a href="https://geomapfish-demo-2-7.camptocamp.com/?lang=fr" target="_blank" role="button" class="btn btn-primary btn-lg btn-block">Live demo</a>
+        </div>
+        <div class="col-sm-6">
+            <a href="https://github.com/geomapfish/getting_started" target="_blank" role="button" class="btn btn-default btn-lg btn-block">Getting started</a>
+        </div>
+    </div>
+    <p class="mt-2">
+        Bienvenue sur le site web de la communauté GeoMapFish (GMF), merci de votre visite !
+    </p>
+
+    <h2>Généralités</h2>
+
+    <p>
+        GeoMapFish permet de construire des applications WebSIG de manière aisée et flexible à travers un géoportail en
+        ligne. Cette solution a été développée pour répondre aux attentes de multiples acteurs, qu'ils soient de type
+        privés, publics ou académiques du domaine du géospatial.
+    </p>
+    <p>
+        GeoMapFish est organisé autour d'une <a href="./community">communauté et d'un project steering committee</a>.
+    </p>
+
+    <h2>Caractéristiques</h2>
+
+    <p>
+        Pour une liste plus complétes des caractéristiques, merci de vous référer à la page
+        des <a href="./functionalities">fonctionnalités</a>.
+    </p>
+    <div class="mt-1 flex">
+        <img class="mr-1 no-shrink" alt="webmapping" src="/images/3_2_webmapping.png">
+        <p>
+            <strong>Cartographie</strong>; elle inclut tous les outils nécessaires à un WebSIG : mesure, dessin, impression, etc.
+        </p>
+    </div>
+    <div class="mt-1 flex">
+
+        <img class="mr-1 no-shrink" alt="editing" src="/images/1_8_layer_editing.png">
+        <p>
+            <strong>Edition avancée</strong>; l'édition (points, lignes, polygones, accrochage) est possible sur des
+            couches protégées de la base de données. Il est même possible de restreindre l'édition à une zone donnée.
+        </p>
+    </div>
+    <div class="mt-1 flex">
+
+        <img class="mr-1 no-shrink" alt="responsive" src="/images/1_1_responsive.png">
+        <p>
+            <strong>Adaptable</strong>; l'interface web est adaptable et compatible avec la plupart des navigateurs et appareils.
+        </p>
+    </div>
+    <div class="mt-1 flex">
+        <img class="mr-1 no-shrink" alt="webmapping description" src="/images/2_1_configuration.png">
+        <p>
+            <strong>Personnalisable et extensible</strong>; au travers de plugins génériques et/ou fait maison, il est
+            possible d'adapter l'application a tous les besoins des différents utilisateurs.
+        </p>
+    </div>
+    <script>
+        document.getElementsByClassName('entry-title')[0].setAttribute('hidden', true)
+    </script>
+
         </div>
     </section>
         </div>
-        <div class="col-sm-3" id="sidebar">
+        <div class="col-sm-2" id="sidebar">
             <aside>
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
 
-<!-- Sidebar/Social -->
-<li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
-  <ul class="list-group" id="social">
-    <li class="list-group-item"><a href="https://twitter.com/GeoMapFish"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
-    <li class="list-group-item"><a href="https://github.com/camptocamp/geomapfish"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
-  </ul>
-</li>
-<!-- End Sidebar/Social -->
+<!-- Sidebar/Images -->
+<div>
+  <h4>Références</h4>
+  <div id="links">
+    <div class="mt-1">
+      <a href="https://carto.aprona.net" target="_blank"><img width="100%" src="/images/references/aprona.png" alt="Aprona, l'observatoire de la nappe d'Alsace title="Aprona, l'observatoire de la nappe d'Alsace"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.cartoriviera.ch" target="_blank"><img width="100%" src="/images/references/cartoriviera.png" alt="Géoportail cartographique de la Riviera title="Géoportail cartographique de la Riviera"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.cartolacote.ch" target="_blank"><img width="100%" src="/images/references/cartolacote.png" alt="Géoportail Cartolacôte title="Géoportail Cartolacôte"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.cjl.ch" target="_blank"><img width="100%" src="/images/references/cjl.png" alt="Géoportail du district de Morges title="Géoportail du district de Morges"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://geo.saintpierre.re" target="_blank"><img width="100%" src="/images/references/saint-pierre.png" alt="Géoportail de Saint-Pierre title="Géoportail de Saint-Pierre"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://geo.jura.ch" target="_blank"><img width="100%" src="/images/references/jura.svg" alt="Géoportail du Système d'Information du Territoire Jurassien title="Géoportail du Système d'Information du Territoire Jurassien"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://sitn.ne.ch" target="_blank"><img width="100%" src="/images/references/neuchatel.png" alt="Géoportail du Système d'Information du Territoire Neuchâtelois title="Géoportail du Système d'Information du Territoire Neuchâtelois"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://geoportail.epfl.ch" target="_blank"><img width="100%" src="/images/references/epfl.svg" alt="Géoportail EPFL title="Géoportail EPFL"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://mapnv.ch" target="_blank"><img width="100%" src="/images/references/mapnv.png" alt="Géoportail Nord Vaudois - Yverdon-les-Bains title="Géoportail Nord Vaudois - Yverdon-les-Bains"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.geo.ti.ch" target="_blank"><img width="100%" src="/images/references/ticino.png" alt="Geoportale del Cantone Ticino title="Geoportale del Cantone Ticino"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://geoview.bl.ch" target="_blank"><img width="100%" src="/images/references/basel-land.svg" alt="Geoview Basel Landschaft title="Geoview Basel Landschaft"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.geo.gr.ch" target="_blank"><img width="100%" src="/images/references/graubunden.png" alt="Graubünden Interaktive Karten title="Graubünden Interaktive Karten"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://nendaz-geoportail.sig.cloud.camptocamp.net" target="_blank"><img width="100%" src="/images/references/nendaz.png" alt="Guichet cartographique de Nendaz title="Guichet cartographique de Nendaz"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.geo.bs.ch" target="_blank"><img width="100%" src="/images/references/mapbs.png" alt="MapBS Geoportal Kanton Basel-Stadt title="MapBS Geoportal Kanton Basel-Stadt"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://carto.grand-chatellerault.fr" target="_blank"><img width="100%" src="/images/references/grand-chatellerault.png" alt="Portail Cartographique de l'Agglomération du Pays Châtelleraudais title="Portail Cartographique de l'Agglomération du Pays Châtelleraudais"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://www.sigip.ch" target="_blank"><img width="100%" src="/images/references/sigip.png" alt="Système d'Information Géographique Intercommunal de Pully et Belmont title="Système d'Information Géographique Intercommunal de Pully et Belmont"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://www.vsgis.ch" target="_blank"><img width="100%" src="/images/references/vsgis.png" alt="WebGIS der Walliser Gemeinden von RUDAZ+PARTNER SA/AG title="WebGIS der Walliser Gemeinden von RUDAZ+PARTNER SA/AG"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://map.geo.sz.ch" target="_blank"><img width="100%" src="/images/references/kantonschwyz.png" alt="WebGIS Kanton Schwyz title="WebGIS Kanton Schwyz"/></a>
+    </div>
+    <div class="mt-1">
+      <a href="https://www.geocommunes.ch/references/" target="_blank"><img width="100%" src="/images/references/geocommunes.png" alt="Association GeoCommunes title="Association GeoCommunes"/></a>
+    </div>
+  </div>
+</div>
+<!-- End Sidebar/Images -->
   </ul>
 </section>
 <!-- End Sidebar -->            </aside>
